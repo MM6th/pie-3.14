@@ -1,0 +1,20 @@
+<!doctype html>
+<html
+  lang = "en">
+  <head>
+    <title>Library page</title>
+  </head>
+  <body>
+    <p>This is the library page. It would be only visible for authorized users.</p>
+    <div
+      data-netlify-identity-menu>
+    </div>
+    <script
+      src = "https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      netlifyIdentity.on('logout', () => {
+        location.href = '/'
+      })
+    </script>
+  </body>
+</html>

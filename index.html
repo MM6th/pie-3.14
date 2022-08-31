@@ -1,0 +1,22 @@
+<!doctype html>
+<html
+  lang = "en">
+  <head>
+    <title>Home page</title>
+  </head>
+  <body>
+    <p>This is the home page. It should be visible without logging in. Unauthorized users will be redirected here.</p>
+    <div
+      data-netlify-identity-menu>
+    </div>
+    <script
+      src = "https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      netlifyIdentity.on('login', () => {
+        if (location.pathname.startsWith('/library')) {
+          location.reload()
+        }
+      })
+    </script>
+  </body>
+</html>
