@@ -1,1 +1,2 @@
 /library/* 200! Role=admin
+/library/* /index.html 401!
